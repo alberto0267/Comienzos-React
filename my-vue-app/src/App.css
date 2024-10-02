@@ -35,29 +35,8 @@
 
 .card {
   padding: 2em;
-  border: 2px solid red;
 }
 
 .read-the-docs {
   color: #888;
-}
-.ButtomTest{
-  background-color:red;
-  color: black;
-  border: 3px solid violet;
-  opacity: 0.2;
-}
-.ButtomTest:hover{
-  background-color: blue;
-  opacity: 1;
-  position: relative;
-  margin-top: 1rem;
-
-}
-.ImageGeralt{
-  width: 10rem;
-}
-.ImageGeralt:hover{
-  width: 15rem;
-  transition: 1s;
 }
