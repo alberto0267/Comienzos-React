@@ -8,6 +8,7 @@ const user = {
 
   name : 'Geralt Rivia',
   imageUrl: 'https://www.ecured.cu/images/f/ff/Geralt_de_Rivia.jpg',
+  imageUrl2: 'https://www.somosxbox.com/wp-content/uploads/2015/03/The_Witcher_3_23.re_.jpg',
   imageSize : 90,
 };
 
@@ -17,13 +18,13 @@ function MyButton() {
   );
 }
 
-function LoginForm(){
+function Witcher(){
   return(
     <p>Login Form</p>
   )
 }
 
-function LoginAdmin(){
+function Butcher(){
   return(
     <p>Login Admin</p>
   )
@@ -32,13 +33,13 @@ function LoginAdmin(){
 
 function App() {
   const [count, setCount] = useState(0)
-  const [IsForm, setIsForm] = useState(false);
+  const [IsWitcher, setIsForm] = useState(false);
 
 let content;
-if(IsForm){
-  content = <LoginForm />
+if(IsWitcher){
+  content = <Witcher />
 }else{
-  content = <LoginAdmin />
+  content = <Butcher />
 }
 
 
@@ -73,18 +74,21 @@ if(IsForm){
        <h2>Bienvenido a mi Aplicacion desde aqui</h2>
        <MyButton />
 
-      <h2>{user.name}</h2>
-      <img src={user.imageUrl} alt="" className='ImageGeralt'/>
-
+  
     {/* Llamo a renderizado */}
 
-
-<div><button onClick={()=> setIsForm(!IsForm)}>
- {IsForm ? 'Brujo' : 'Carnicero'}
+    <h2>{user.name}</h2>
+     {IsWitcher ?<img src={user.imageUrl} alt="" className='ImageGeralt'/> : <img src={user.imageUrl2} alt="" className='ImageGeralt'/>  }
+    
+<div><button onClick={()=> setIsForm(!IsWitcher)}>
+ {IsWitcher ? 'Brujo' : 'Carnicero'}
  </button>
+
  </div>
  
-
+ 
+    
+   
     </>
   )
 
