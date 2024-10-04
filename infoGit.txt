@@ -1,0 +1,11 @@
+Para añadir los archivos
+git add .
+
+Comitear
+git commit -m ""
+
+Para subir definitivo
+git push
+
+Para bajar 
+git pull
