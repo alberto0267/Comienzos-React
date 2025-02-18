@@ -126,8 +126,8 @@ function App() {
   return (
     <>
       <div>
-        <h1>Prueba</h1>
-        <h1>PRUEBA de cambio GIT HUB</h1>
+        <h2>Prueba</h2>
+        <h3>PRUEBA de cambio GIT HUB</h3>
         <h1></h1>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
