@@ -28,73 +28,73 @@ const products = [
 
 const listTakeBattle = [
 
-  {title :"Pocion", isButcher:true,id:1},
-  {title :"Espada plata", isButcher:true,id:2},
-  {title :"Espada de acero", isButcher:false,id:3},
-  {title :"Arrd", isButcher:false,id:4},
+  { title: "Pocion", isButcher: true, id: 1 },
+  { title: "Espada plata", isButcher: true, id: 2 },
+  { title: "Espada de acero", isButcher: false, id: 3 },
+  { title: "Arrd", isButcher: false, id: 4 },
 ]
 
-function TakeRealBattleButcher(){
-const listBattle = listTakeBattle.map(list=>
-  
-  <li
+function TakeRealBattleButcher() {
+  const listBattle = listTakeBattle.map(list =>
+
+    <li
       key={list.id}
-    style={{
-      display: list.isButcher?"none":"block"
-    }}
+      style={{
+        display: list.isButcher ? "none" : "block"
+      }}
 
-  >
-    {list.title}
+    >
+      {list.title}
 
-  </li>
+    </li>
 
 
-)
-  return(
+  )
+  return (
     <p>{listBattle} </p>
 
   );
 }
-function TakeRealBattleNotButcher(){
-  const listBattle = listTakeBattle.map(list=>
-    
-  
+function TakeRealBattleNotButcher() {
+  const listBattle = listTakeBattle.map(list =>
+
+
     <li
-        key={list.id}
+      key={list.id}
       style={{
-        display: list.isButcher?"Block":"none"
+        display: list.isButcher ? "Block" : "none"
       }}
-  
+
     >
       {list.title}
-  
+
     </li>
-  
-  
+
+
   )
-    return(
-      <p>{listBattle} </p>
-  
-    );
-  }
+  return (
+    <p>{listBattle} </p>
 
-function Espadas(){
+  );
+}
+
+function Espadas() {
 
 
-const listItems = products.map(product => 
+  const listItems = products.map(product =>
 
-  <li
-    key={product.id}
-    style={{
-      color: product.isFast ? 'gold' : "gray"
+    <li
+      key={product.id}
+      style={{
+        color: product.isFast ? 'gold' : "gray"
 
-    }}
-  >
-    {product.title}
+      }}
+    >
+      {product.title}
 
-  </li>
-)
-  return(
+    </li>
+  )
+  return (
     <ul>{listItems}  </ul>
   )
 }
@@ -127,6 +127,8 @@ function App() {
     <>
       <div>
         <h1>Prueba</h1>
+        <h1>PRUEBA de cambio GIT HUB</h1>
+        <h1></h1>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -159,18 +161,18 @@ function App() {
 
       <div><button className='ImageGeralt' onClick={() => setIsForm(!IsWitcher)}>
         {IsWitcher ? 'Brujo' : 'Carnicero'}
-        </button>
+      </button>
         <h2>Que arma llevar?</h2>
         {IsWitcher ? <TakeRealBattleButcher /> : <TakeRealBattleNotButcher />}
-        
 
-    
-    
-    
+
+
+
+
       </div>
 
-    <h2>Son rapidas sus armas?</h2>
-    <Espadas />
+      <h2>Son rapidas sus armas?</h2>
+      <Espadas />
 
 
     </>
